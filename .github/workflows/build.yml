@@ -14,10 +14,13 @@ on:
             - "resume.tex"
             - "index.html"
             - ".github/workflows/**"
+    workflow_dispatch:
 
 jobs:
     build_latex:
         runs-on: ubuntu-latest
+        container:
+            image: danteev/texlive:latest
         steps:
             - name: Checkout
               uses: actions/checkout@v2
@@ -34,10 +37,11 @@ jobs:
                   mkdir build 
                   cp *.pdf build/ 
                   cp index.html build/
-                  
+                  mv "build/resume.pdf" "build/Rutvik Joshi - Resume.pdf"
+                  ls build/
             - name: Git add
-              run: git add resume.pdf
-              
+              run: git add *.pdf
+
             - name: Deploy to GitHub Pages
               uses: JamesIves/github-pages-deploy-action@4.1.4
               with:
