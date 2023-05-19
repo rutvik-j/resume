@@ -40,7 +40,10 @@ jobs:
                   mv "build/resume.pdf" "build/Rutvik Joshi - Resume.pdf"
                   ls build/
             - name: Git add
-              run: git add *.pdf
+              run: |
+                    git config --global --add safe.directory '*'
+                    git add *.pdf
+                    
 
             - name: Deploy to GitHub Pages
               uses: JamesIves/github-pages-deploy-action@4.1.4
