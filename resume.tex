@@ -1,256 +1,205 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
+\documentclass{resume} % Use the custom resume.cls style
 
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{fontawesome5}
-\usepackage{multicol}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
-\input{glyphtounicode}
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-\usepackage{xcolor}
-\hypersetup{colorlinks,urlcolor=blue}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
-
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Rutvik Joshi} % Your name
+% You can merge both of these into a single line, if you do not have a website.
+\address{ \\ Halifax, CA} 
+\address{\href{mailto:rutvik.j@dal.ca}{Rutvik.J@dal.ca} \\ \href{https://linkedin.com/in/rutvikjoshi}{linkedin.com/in/RutvikJoshi} \\
+\href{https://github.com/RutvikJ77}{github.com/RutvikJ77}}
 
 \begin{document}
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE
+%----------------------------------------------------------------------------------------
 
-%----------HEADING----------
+% \begin{rSection}{OBJECTIVE}
 
-\begin{center}
-    {\Huge \scshape Rutvik Joshi} \\ \vspace{1pt}
-    % Mumbai, India \\ \vspace{1pt}
-    \faGlobe \href{https://rutvik-j.github.io/home}{\raisebox{-0.1\height}\ \underline{rutvik-j.com}} ~
-    \faEnvelope \href{mailto:rutvikj77@outlook.com}{\raisebox{-0.2\height}\  \underline{rutvikj77@outlook.com}} ~ 
-    \faLinkedin \href{https://linkedin.com/in/rutvikjoshi/}{\raisebox{-0.2\height}\ \underline{linkedin.com/in/rutvikjoshi}}  ~
-    \faGithub \href{https://github.com/RutvikJ77}{\raisebox{-0.2\height}\ \underline{github.com/RutvikJ77}}
-    \vspace{-8pt}
-\end{center}
+% {Analysis}
 
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of Mumbai}{2018 -- 2022}
-      {Bachelor of Engineering in Computer Engineering(CGPA - 9.67/10)}{Mumbai, India}
-  \resumeSubHeadingListEnd
-
-%------RELEVANT COURSEWORK-------
-% \section{Relevant Coursework}
-%     %\resumeSubHeadingListStart
-%         \begin{multicols}{4}
-%             \begin{itemize}[itemsep=-5pt, parsep=3pt]
-%                 \item\small Data Structures
-%                 \item Software Methodology
-%                 \item Algorithms Analysis
-%                 \item Database Management
-%                 \item Artificial Intelligence
-%                 \item Internet Technology
-%                 \item Systems Programming
-%                 \item Computer Architecture
-%             \end{itemize}
-%         \end{multicols}
-%         \vspace*{2.0\multicolsep}
-%     %\resumeSubHeadingListEnd
-
-
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Polygon Technology}{July 2021 -- Present}
-      {Marketing Analyst}{Bangalore, KA}
-      \resumeItemListStart
-        \resumeItem{Responsible for generating market research reports and monitoring social media analytics with data-first mindset.}
-        \resumeItem{Accelerated social media engagement by \textbf{270\%} over multiple channels through statistical analysis in MSExcel. Identified and informed 4 KPIs leveraging the narrative and company position in Blockchain communities.}
-        \resumeItem{Reported the insights to the CMO raising a \textbf{propelling shift} to the marketing strategy. Additionally, developed an internal Webapp using python to monitor user insights, aiding with multiple design strategies for campaigns.}
-        \resumeItem{Analysed \textbf{Decentralised Finance} projects developed on Polygon using SQL to showcase the actual user growth on the main network bringing in a change to the campaign strategies through appealing dashboards.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {BlueLearn(previously Clinify)}{Jan 2021 -- Sept 2021}
-      {Data Analyst}{Community}
-      \resumeItemListStart
-        \resumeItem{Efficiently lead the Engagement team with Data proof mindset and presented community insights to VP.}
-        \resumeItem{Identified 5 key metrics from statistical community analysis and up scaled experience for \textbf{25,000}+ members. Formulated 10 key sectors of community growth through hypothesis}
-        \resumeItem{Proposed enhanced on-boarding processes through UX methodologies, \textbf{escalating user retention} by 20\%. Facilitated \textbf{visual reports} and dashboards to stakeholders improving idea implementation strategies by 33\%.}
-    \resumeItemListEnd
-    
-  \resumeSubHeadingListEnd
-\vspace{-16pt}
-
-%-----------PROJECTS-----------
-\section{Projects}
-    \vspace{-5pt}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\href{https://github.com/RutvikJ77/Resume-aid}{\textbf{\underline{Resume-Aid}}} $|$ \emph{Python, Streamlit, Spacy,}}{}
-          \resumeItemListStart
-            \resumeItem{Extracted social media influenced stocks and interpreted their impact using \textbf{Natural Language Processing} techniques.}
-            \resumeItem{Plotted a simulated graph of sentiments using matplotlib with \textbf{92\% positive} responses.}
-          \resumeItemListEnd
-          \vspace{-13pt}
-      \resumeProjectHeading
-          {\href{https://github.com/RutvikJ77/Citi-Bike-Analysis}{\textbf{\underline{Citi Bike Report}}} $|$ \emph{Jupyter Notebook, Seaborn, Matplotlib}}{}
-          \resumeItemListStart
-            \resumeItem{Analyzed and reported \textbf{3.3 million} records of Citi Bike consumer usage before and during the pandemic.}
-            \resumeItem{Visualized and developed a report using python libraries with 76\% positive forecast.}
-            % \resumeItem{}
-          \resumeItemListEnd 
-          \vspace{-13pt}
-          \resumeProjectHeading
-              {\href{https://github.com/RutvikJ77/ExAncient}{\textbf{\underline{ExAncient}}} $|$ \emph{Python, Flask, Tensorflow, SciKit-Learn}}{}
-          \resumeItemListStart
-            \resumeItem{Imparted an experience of ancient style paintings with user input photographs using \textbf{Image Style Transfer} technique.}
-            \resumeItem{Generate a romantic story based on the Photograph using \textbf{Convolutional Neural Network} and a caption model generator with \textbf{95\% accuracy}.}
-            % \resumeItem{}
-          \resumeItemListEnd 
-    \resumeSubHeadingListEnd
-\vspace{-15pt}
-
-
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages \& Databases} {: Python, R, C++, Java, Javascript, SQL, PostgreSQL, MySQL} \\
-     \textbf{Developer Tools}{: VS Code, Tableau, Microsoft Office, Google suite, Git, Notion} \\
-     \textbf{Technologies/Frameworks}{: Tensorflow, Numpy, Pandas, Sci-kit learn, Seaborn, Matplotlib, Google Cloud Platform} \\
-     \textbf{Soft Skills}{: Management, Creativity, Research, Story telling, Teamwork}\\
-    }}
- \end{itemize}
- \vspace{-16pt}
- 
-% \section{rSection}{Techical Skills}
-
-%     \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-%     Technical Skills & Python, R, C++, Java, Javascript.\\
-%     Tools & Tableau, Microsoft Office, Google suite, Git, Notion.\\
-%     Databases & SQL, PostgreSQL, MySQL.\\
-%     Libraries & Tensorflow, Numpy, Pandas, Sci-kit learn, Seaborn, Matplotlib.\\
-%     Platforms & Google Cloud Platform, Heroku.\\
-%     Soft Skills & Management, Creativity, Research, Story telling, Teamwork.\\
-%     \end{tabular}
 % \end{rSection}
+
+%----------------------------------------------------------------------------------------
+% Skill Summary	
+%----------------------------------------------------------------------------------------
+% \begin{rSection}{ABOUT}
+% I am a creative and logical problem solver leveraging the potential of data and empathy for providing insights and services to users complying with agile practices of growth. I value community diversity, growth and Open-source.
+
+
+% \end{rSection}
+
+
+
+
+%----------------------------------------------------------------------------------------
+% TECHNICAL STRENGTHS	
+%----------------------------------------------------------------------------------------
+% \begin{rSection}{SKILLS}
+
+% \begin{tabular}{ @{} >{\bfseries}l @{\hspace{2ex}} l }
+% Soft Skills & Management, Creativity, Research, Storytelling, Teamwork\\
+% Developer Tools & VS Code, Tableau, Microsoft Office, Google suite, Git, Notion\\
+% Languages \& Databases & Python, R, SQL, PostgreSQL, MySQL, MongoDB\\
+% Libraries \& Platforms & Tensorflow, Numpy, Pandas, Sci-kit learn, Seaborn, Matplotlib, GCP, Heroku\\
+
+
+% \end{tabular}
+% \end{rSection}
+
+\begin{rSection}{SKILLS} 
+Business Analysis, Process Development, Strategic Planning, Data Analysis, Communication, Problem-solving, SQL, Relational Databases, Project Management Tools(Jira, Confluence), and Tableau.
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{EXPERIENCE}
+
+% \textbf{Junior Data Analyst intern} \hfill May 2023 - August 2023\\
+% Rimot.io \hfill \textit{Halifax, Remote}
+%  \begin{itemize}
+%     \itemsep -3pt {} 
+%     \item Analyzed CANEdge IOT vessel data and apply strong mathematical skills to prepare, analyze and present data Innate ability to recognize patterns and validate hypotheses
+%     \item Built visually appealing dashboards using Graphana & OpenSearch Dashboards effectively quantifying and bringing a change of 20% in data observation and frequency of the ingestion pipeline.
+%  \end{itemize}
+
+
+
+\textbf{Ecosystem Marketing Manager} \hfill April 2022 - February 2023\\
+Polygon Labs \hfill \textit{California, Remote}
+ \begin{itemize}
+    \itemsep -3pt {} 
+    \item Advising and consulting 450+ Web3 projects with GTM strategies including the frameworks, and processes for the long-term sustenance of the projects. Managing cross-functional global social engagement teams, both internally, and externally while delivering presentations and reports to senior executives/stakeholders.
+    % \item gathering 500K+ Impressions over a single social platform and increasing engagement by 14\% over the week.
+    % \item Managing cross-functional global social engagement teams, both internally, and externally with 20+ project teams on a daily basis, across all areas while creating and delivering high-quality presentations and reports to senior executives/stakeholders and business managers.
+    % \item Translating complex business questions and operations into solutions, covering in-depth functional expertise for smooth functioning.
+
+ \end{itemize}
+
+
+\textbf{Marketing Analyst} \hfill July 2021 - April 2022\\
+Polygon Labs \hfill \textit{Bangalore, Remote}
+ \begin{itemize}
+    \itemsep -3pt {} 
+    \item Produced comprehensive market research reports and utilized a data-first approach to monitor social media analytics. Achieved a remarkable 270\% acceleration in social media engagement across multiple channels through in-depth statistical analysis. Identified and harnessed 4 key performance indicators (KPIs) to strengthen the company's narrative and positioning within Blockchain communities.
+    \item Delivered impactful insights to the CMO, driving a substantial shift in the marketing strategy, and developed an internal WebApp utilizing Python to monitor user insights for campaign design.
+ \end{itemize}
+
+\textbf{Community Data Analyst} \hfill January 2021 - July 2021\\
+BlueLearn(prev. Clinify) \hfill \textit{Community(Volunteering)}
+ \begin{itemize}
+    \itemsep -3pt {} 
+    \item Drove the Engagement team with efficiency, delivering data-driven insights to moderators. Conducted statistical community analysis and identified 5 pivotal metrics, enhancing the experience for over 27,000 members.
+    % \item Spearheaded the formulation of 10 key sectors for community expansion, fostering substantial growth.
+    % \item Championed improved onboarding processes by leveraging UX methodologies, resulting in a remarkable 20\% increase in user retention. Introduced impactful idea implementation strategies through visual reports and dashboards, enabling seamless execution and driving successful outcomes.
+ \end{itemize}
  
+%  \textbf{Data Science and Business Analyst intern} \hfill March 2021 - April 2021\\
+% The Sparks Foundation \hfill \textit{Singapore}
+%  \begin{itemize}
+%     \itemsep -3pt {} 
+%      \item Analyzed sports data to determine \textbf{\textgreater84\%} well-performing teams and help businesses collaborate with them in order for a marketing deal. 
+%      \item Implemented KMeans clustering algorithm to determine the underperforming groups present in the dataset.
+%  \end{itemize}
+% \textbf{Software Developer} \hfill Aug 2019 - Aug 2020\\
+% Incerno Technologies Pvt. Ltd. \hfill \textit{Mumbai, IN}
+%  \begin{itemize}
+%     \itemsep -3pt {} 
+%      \item Examined the planned drone system for the agricultural use case and assessed the required parts involved in drone building with main focus in areas of Computer Vision.
+%     \item Developed automation scripts which handle the Deep learning preprocessing stage required for computer vision using python.
+%  \end{itemize}
+
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PROJECTS}
+\vspace{0.05em}
+
+\href{https://github.com/RutvikJ77/Resume-aid}{\textbf{\underline{Resume-Aid}}} $|$\textit{ Python, Streamlit, Spacy}
+\begin{itemize}
+    \item Achieved accurate resume analysis and insightful scoring by developing a web application in Python, leveraging Spacy. Employed RAKE and cosine similarity to identify relevant keywords aligned with job descriptions, resulting in enhanced accuracy and relevance for better candidate evaluation.
+    % \item  {Analyzed Resumes to provide accurate insights and scores using RAKE and cosine similarity for particular words which co-relate with the presented job description.}
+    % \item{Gather a list of \textbf{top 10} phrases and words from resume and generate top 20 importance and similarity list to calculate the final score and display it through a web application.}
+\end{itemize}
+
+% \href{https://github.com/RutvikJ77/ExAncient}{\textbf{\underline{ExAncient}}} $|$\textit{ Python, Flask, Tensorflow, SciKit-Learn}
+% \begin{itemize}
+%     \item  {Imparted an experience of ancient style paintings with modern user input photographs using \textbf{Image Style Transfer} deep learning technique.}
+%     \item {Generate a romantic story based on the Photograph using \textbf{Convolutional Neural Network} and a caption model generator with \textbf{95\% accuracy}.}
+% \end{itemize}
+
+% \href{https://github.com/RutvikJ77/Smart-queue-management}{\textbf{\underline{Smart Queue Management}}} $|$\textit{ Jupyter Notebook, Intel OpenVino toolkit, Tensorflow}
+% \begin{itemize}
+%     \item  {Determines if a shop queue has reached its maximum number from input video footage using custom built person detection algorithm and OpenCV.}
+%     \item {Generates a warning in real time using Intel openvino edge computing toolkit if the queue exceeds the given maximum count.}
+% \end{itemize}
+
+% \href{https://github.com/RutvikJ77/RetStock}{\textbf{\underline{RetStock}}} $|$\textit{ Python, Streamlit, Matplotlib}
+% \begin{itemize}
+%     \item  {Extracted social media influenced stocks and interpreted their impact on the closing prices over time using \textbf{Natural Language Processing} techniques.}
+%     \item {Plotted a simulated graph of sentiments using matplotlib with \textbf{92\% positive} responses on social stock. Deployed the web view using Streamlit.}
+% \end{itemize}
+
+\href{https://github.com/RutvikJ77/Case-Predictor}{\textbf{\underline{Case-Predictor}}} $|$\textit{ Python, Jupyter Notebook, Streamlit, SciKit-Learn}
+\begin{itemize}
+    \item  Performed exploratory data analysis and implemented the Random Forest Algorithm to determine vaccination co-relation with the reduction of infection cases. Deployed a prediction model using Streamlit.
+\end{itemize}
+
+% \href{https://public.tableau.com/app/profile/rutvik.j/viz/ImportExportAnalysis/ImportExportAnalysis}{\textbf{\underline{Indian Import-Export Analysis}}} $|$\textit{ Python, Tableau, MS-Excel}
+% \begin{itemize}
+%     \item Developed a comprehensive Tableau visualization to analyze import and export commodity data, facilitating quick identification of trends and growth opportunities for stakeholders.
+% \end{itemize}
+
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf Master of Applied Computer Science \hfill {2022 - 2024}}\\
+\textit{Dalhousie University} \hfill{\textit{Halifax, CA}}
+
+{\bf Bachelor of Engineering in Computer Engineering \hfill {2018 - 2022}}\\
+\textit{University of Mumbai(CGPA - 9.03/10)} \hfill{\textit{Mumbai, IN}}
 
 
-%-----------INVOLVEMENT---------------
-\section{Achievements and Extra-Curricular Activities}
-    \resumeItemListStart
-        \resumeItem{\textbf{Awarded Best Beginner Hack} and \textbf{Best International Team} at Kent Hack Enough Hackathon 2020.}
-        \resumeItem{Awarded \textbf{Best Data Science} project at TheGoldenHack 2021 and overall \textbf{First} from 130+ projects at MLH DataDayGrind 2.0. }
-        \resumeItem{Ranked in \textbf{Top 20\%} at \textbf{Qiskit Quantum India Challenge}.}
-        \resumeItem{Mentored at North Texas's largest Hackathon \textbf{HackUTD}VII Seas and at \textbf{Hack The North} Canada's Largest Hackathon in the domain of Data Science and Analytics. Lead a team of 4 at more than 15+ hackathons.}
-        \resumeItem{Volunteered and promoted the agenda of \textbf{RIO+25} program held by \textbf{United Nations Sustainable Development group} to 45 students.}
-    \resumeItemListEnd
+\end{rSection}
+
+
+
+
+%----------------------------------------------------------------------------------------
+% \begin{rSection}{Certifications \& Specializations} 
+% %  \textbf{Deep Learning}(Deeplearning.ai), \textbf{Intel Edge AI developer Nanodegree}(Udacity), 
+% \textbf{Google Data Analytics}(Coursera), \textbf{Blockchain Specialization}(Coursera),
+% \textbf{Business Intelligence and Data Analytics}(Coursera)
+% \end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Achievements and Extra-Curricular Activities} 
+\begin{itemize}
+    % \item \textbf{Awarded Best Beginner Hack} and \textbf{Best International Team} at Kent Hack Enough Hackathon 2020.
+    \item Won \textbf{Best Data Science} project at TheGoldenHack 2021 and overall \textbf{First} from 130+ projects at MLH DataDayGrind 2.0. \textbf{Winner} at Saint Mary's University(Halifax) Innovation Sprint for \textbf{developing unique solution} to the challenges faced by local businesses.
+    % \item Ranked in \textbf{Top 20\%} at \textbf{Qiskit Quantum India Challenge}.
+    \item Mentored at Canada's biggest hackathon \textbf{Hack The North} and at North Texas's largest Hackathon \textbf{HackUTD}VII Seas.
+    % \item Lead a team of 4 at more than 15+ international hackathons.
+    % \item Selected from a pool of 10000+ applicants to learn about the upcoming AI change of Edge computing for \textbf{Intel Edge AI scholarship}.
+    % \item Selected as \textbf{SkillShare Scholarship} recipient from a pool of candidates to learn about diverse courses available from distinct instructors.
+    % \item Collaborated and guided a group of \textbf{12 CyberSecurity} enthusiasts to visit Imedita in Pune.
+    % \item Volunteered and promoted the agenda of \textbf{RIO+25} program organized by \textbf{United Nations Sustainable Development group} to 45 students.
+    % \item \textbf{Head Organizer} and a guide for 126 students for an Industrial visit to Kitec, Silvassa about 188KM away from home destination.
+\end{itemize}
+\end{rSection}
 
 
 \end{document}
