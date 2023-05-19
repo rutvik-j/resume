@@ -20,7 +20,7 @@ jobs:
     build_latex:
         runs-on: ubuntu-latest
         container:
-            image: danteev/texlive:latest
+            image: texlive/texlive:TL2021-historic-tree
         steps:
             - name: Checkout
               uses: actions/checkout@v2
