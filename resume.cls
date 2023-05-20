@@ -75,7 +75,7 @@
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
-    \hfil{\MakeUppercase{\namesize\textbf \@name}}\hfil
+    \hfil{\MakeUppercase{\namesize\textbf{ \@name}}}\hfil
     \nameskip\break
   \endgroup
 }
@@ -119,7 +119,7 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- \textbf{ #1} \hfill {#2} % Bold company name and date on the right
+ \textbf{ #1 } \hfill {#2} % Bold company name and date on the right
  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
   \\
   {\em #3} \hfill {\em #4} % Italic job title and location
